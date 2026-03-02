@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 
 import Dashboard from "./pages/Dashboard";
-// import Customers from "./pages/Customers";
-// import Leads from "./pages/Leads";
-// import Loans from "./pages/Loans";
+import Customers from "./pages/Customers";
+import Leads from "./pages/Leads";
+import Loans from "./pages/Loans";
 // Uncomment these and add the corresponding files when you implement these pages
 // import Risk from "./pages/Risk";
 // import Reports from "./pages/Reports";
@@ -17,9 +17,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          {/* <Route path="/customers" element={<Customers />} /> */}
-          {/* <Route path="/leads" element={<Leads />} /> */}
-          {/* <Route path="/loans" element={<Loans />} /> */}
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/leads" element={<Leads />} />
+          <Route path="/loans" element={<Loans />} />
           {/* The following routes refer to components that aren't present yet. */}
           {/* Remove or uncomment when the components exist. */}
           {/* <Route path="/risk" element={<Risk />} /> */}
