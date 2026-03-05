@@ -5,6 +5,8 @@ import Dashboard from "./pages/Dashboard";
 import Customers from "./pages/Customers";
 import Leads from "./pages/Leads";
 import Loans from "./pages/Loans";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 // Uncomment these and add the corresponding files when you implement these pages
 // import Risk from "./pages/Risk";
 // import Reports from "./pages/Reports";
@@ -14,20 +16,26 @@ import Loans from "./pages/Loans";
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/customers" element={<Customers />} />
-          <Route path="/leads" element={<Leads />} />
-          <Route path="/loans" element={<Loans />} />
-          {/* The following routes refer to components that aren't present yet. */}
-          {/* Remove or uncomment when the components exist. */}
-          {/* <Route path="/risk" element={<Risk />} /> */}
-          {/* <Route path="/reports" element={<Reports />} /> */}
-          {/* <Route path="/admin/users" element={<Users />} /> */}
-          {/* <Route path="/admin/roles" element={<Roles />} /> */}
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        
+        {/* Main Application Routes wrapped in Layout */}
+        <Route path="/*" element={
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/customers" element={<Customers />} />
+              <Route path="/leads" element={<Leads />} />
+              <Route path="/loans" element={<Loans />} />
+              {/* <Route path="/risk" element={<Risk />} /> */}
+              {/* <Route path="/reports" element={<Reports />} /> */}
+              {/* <Route path="/admin/users" element={<Users />} /> */}
+              {/* <Route path="/admin/roles" element={<Roles />} /> */}
+            </Routes>
+          </Layout>
+        } />
+      </Routes>
     </BrowserRouter>
   );
 }
