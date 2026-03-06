@@ -7,9 +7,9 @@ import Leads from "./pages/Leads";
 import Loans from "./pages/Loans";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Risk from "./pages/Risk";
+import Reports from "./pages/Reports";
 // Uncomment these and add the corresponding files when you implement these pages
-// import Risk from "./pages/Risk";
-// import Reports from "./pages/Reports";
 // import Users from "./pages/admin/Users";
 // import Roles from "./pages/admin/Roles";
 
@@ -28,8 +28,8 @@ function App() {
               <Route path="/customers" element={<Customers />} />
               <Route path="/leads" element={<Leads />} />
               <Route path="/loans" element={<Loans />} />
-              {/* <Route path="/risk" element={<Risk />} /> */}
-              {/* <Route path="/reports" element={<Reports />} /> */}
+              <Route path="/risk" element={<Risk />} />
+              <Route path="/reports" element={<Reports />} />
               {/* <Route path="/admin/users" element={<Users />} /> */}
               {/* <Route path="/admin/roles" element={<Roles />} /> */}
             </Routes>
